@@ -2,20 +2,20 @@
 
 A Google Cloud Platform Key Management System Flow Blockchain Authorizer. This library can be used to create a Flow authorization function by using the Google KMS signing function.
 
-> Forked from: https://github.com/doublejumptokyo/fcl-kms-authorizer
+> Forked from: https://github.com/lukaracki/fcl-kms-gcp-authorizer
 
 To use this library, the following steps have to be completed:
 
-1. [Installation](https://github.com/lukaracki/fcl-kms-gcp-authorizer/#installation)
-1. [GCP KMS Setup](https://github.com/lukaracki/fcl-kms-gcp-authorizer/#GCP-KMS-Setup)
-1. [Flow Account Creation using **_GCP KMS Raw Hex Key_**](https://github.com/lukaracki/fcl-kms-gcp-authorizer/#flow-account-creation)
+1. [Installation](https://github.com/EurekaDAO/GCP-KMS-Flow-Authorizer/#installation)
+2. [GCP KMS Setup](https://github.com/EurekaDAO/GCP-KMS-Flow-Authorizer/#GCP-KMS-Setup)
+3. [Flow Account Creation using **_GCP KMS Raw Hex Key_**](https://github.com/EurekaDAO/GCP-KMS-Flow-Authorizer/#flow-account-creation)
 
 When you've completed the steps above you can use this library to sign transactions from the created Flow account using the key you've set up via GCP KMS.
 
 ## Installation
 
 ```bash
-$ npm install fcl-gcp-kms-authorizer
+$ npm install gcp-kms-flow-authorizer
 ```
 
 ## GCP KMS Setup
@@ -28,7 +28,7 @@ This library uses **_ECDSA_P256_, _SHA2_256_** based keys. You need to generate 
 
 > Google Cloud Documentation for Creating Keys: https://cloud.google.com/kms/docs/creating-asymmetric-keys
 
-After creating your key, you need to get the key's resource name. The resource name is used to create an authorizer instance, see the example file [send-tx.ts](https://github.com/lukaracki/fcl-kms-gcp-authorizer/blob/main/examples/send-tx.ts).
+After creating your key, you need to get the key's resource name. The resource name is used to create an authorizer instance, see the example file [send-tx.ts](https://github.com/EurekaDAO/GCP-KMS-Flow-Authorizer/blob/main/examples/send-tx.ts).
 
 ```ts
 const resourceId: string = { yourResourceName };
@@ -76,7 +76,7 @@ $ flow accounts create \
 
 ## Examples
 
-See [send-tx.ts](https://github.com/lukaracki/fcl-kms-gcp-authorizer/blob/main/examples/send-tx.ts).
+See [send-tx.ts](https://github.com/EurekaDAO/GCP-KMS-Flow-Authorizer/blob/main/examples/send-tx.ts).
 
 ```ts
 import { GcpKmsAuthorizer } from '../src/auth/authorizer';
@@ -138,4 +138,4 @@ main().catch(e => console.error(e));
 
 ## Credits
 
-Based on the AWS KMS version by @doublejumptokyo, adjusted to work with the GCP KMS.
+Based on the GCP KMS version by @lukaracki, updated to work with modern versions of FCL.
