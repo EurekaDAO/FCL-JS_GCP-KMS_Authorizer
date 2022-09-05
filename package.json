@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lukaracki/fcl-kms-gcp-authorizer.git"
+    "url": "git+https://github.com/EurekaDAO/GCP-KMS-Flow-Authorizer.git"
   },
   "engines": {
     "node": ">=10"
@@ -46,13 +46,13 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "fcl-gcp-kms-authorizer",
-  "author": "Luka Racki <luka@racki.dev>",
+  "name": "gcp-kms-flow-authorizer",
+  "author": "Eureka DAO Software LLC. <dev@eurekadao.io>",
   "module": "dist/fcl-gcp-kms-authorizer.esm.js",
   "bugs": {
-    "url": "https://github.com/lukaracki/fcl-kms-gcp-authorizer/issues"
+    "url": "https://github.com/EurekaDAO/GCP-KMS-Flow-Authorizer/issues"
   },
-  "homepage": "https://github.com/lukaracki/fcl-kms-gcp-authorizer#readme",
+  "homepage": "https://github.com/EurekaDAO/GCP-KMS-Flow-Authorizer#readme",
   "devDependencies": {
     "@google-cloud/storage": "^5.14.4",
     "@onflow/types": "^0.0.5",
@@ -69,8 +69,8 @@
   },
   "dependencies": {
     "@google-cloud/kms": "^2.8.1",
-    "@onflow/fcl": "^0.0.77",
-    "@onflow/rlp": "^0.0.3",
+    "@onflow/fcl": "^1.2.0",
+    "@onflow/rlp": "^1.0.2",
     "@types/asn1js": "^2.0.2",
     "@types/node": "^16.10.2",
     "@types/pvutils": "^1.0.1",
